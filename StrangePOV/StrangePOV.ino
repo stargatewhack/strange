@@ -50,8 +50,6 @@ unsigned long prevTime = 0;
 unsigned long currTime = 0;
 int sumTime = 0;
 
-
-
 /*
  * Setup
  */
@@ -74,14 +72,21 @@ void setup() {
  */
 void loop() {
 
-  //Display POV
   if (tr > 0) {
+    tw = calculateTw();
+
+    if (tw > 0) {
+
+      //Display POV
+      while(){
 
 
-    
+
+
+        
+      }
+    } 
   }
-  
-
 }
 
 /*
@@ -114,9 +119,9 @@ long calculateTr(){
 }
 
 long calculateTw() {
-
-
+  // tw = tr/na - nc * 16MHz * 1000000 (us/s)
   
+  return double(tr/na) - double((nc * 1000000)/16000000);
 }
 
 //Approx 482 clock cycles
