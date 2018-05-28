@@ -77,12 +77,14 @@ void loop() {
 
     if (tw > 0) {
 
-      //Display POV
+      // Display POV
       while(){
 
-
-
-
+        // Load/Manipulate Image
+        refreshImage();
+        
+        // Set LEDs
+        writeDataToLEDS();
         
       }
     } 
@@ -140,6 +142,10 @@ void writeDataToLEDS(){
   digitalWrite(latchPin, HIGH);
 }
 
+void refreshImage(){
 
+
+  
+}
 
 
